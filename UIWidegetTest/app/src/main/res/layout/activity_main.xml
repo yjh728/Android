@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--TextView用于显示一段文本信息-->
+    <!--TestView文字默认左对齐，gravity属性用于指定对齐方式-->
+    <!--textSize用于指定文字大小，Android中以sp为单位-->
+    <!--textColor用于指定文字颜色-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is TestView!"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textColor="#00ff00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <!--Button用于和用户交互-->
+    <!--Button会对所有英文字母自动进行大写转换，可以通过textAllCaps参数来禁用-->
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EditText"
+        android:textSize="24sp"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="圆形进度条"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="条形进度条"
+        />
+
+    <Button
+        android:id="@+id/button_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AlertDialog测试"/>
+
+    <Button
+        android:id="@+id/button_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ProgressDialog测试"/>
+
+    <!--用于与用户进行交互，允许用户在控件里进行输入和编辑内容，并在程序中对内容进行处理-->
+    <!--hint参数可以用来显示一些提示信息，当用户输入信息时会自动消失-->
+    <!--maxLines用来限定最大行数，当输入内容超过最大行数时，文本就会向上滚动-->
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="type something here"
+        android:textColorHint="#00ff00"
+        android:maxLines="3"
+        />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_background"
+        />
+
+    <!--用于在界面上显示一个进度条，默认为圆形进度条-->
+    <!--style属性可以指定样式-->
+    <!--visvility属性为Android空间的可见属性-->
+    <!--不指定时，控件都是可见的-->
+    <!--visible表示可见
+        invisible表示不可见
+        gone表示可见但不占用屏幕空间-->
+    <ProgressBar
+        android:id="@+id/progress_bar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <ProgressBar
+        android:id="@+id/progress_bar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="10"
+        />
+</LinearLayout>

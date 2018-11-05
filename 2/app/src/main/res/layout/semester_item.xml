@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/m115px"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginRight="@dimen/m30px">
+
+    <TextView
+        android:id="@+id/semester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m25px"
+        android:textColor="#CCCCCC"
+        android:textSize="@dimen/m28px"/>
+
+    <View
+        android:id="@+id/semester_hx"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m3px"
+        android:layout_gravity="bottom"
+        android:visibility="invisible"
+        android:textColor="#59B7FF"/>
+
+</LinearLayout>

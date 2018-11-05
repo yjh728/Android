@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!--<variable
+            name="usermodel"
+            type="com.example.testmvvm.model.UserModel"/>-->
+        <import type="com.example.testmvvm.model.UserModel" />
+
+        <variable
+            name="usermodel"
+            type="UserModel" />
+
+        <variable
+            name="userviewmodel"
+            type="com.example.testmvvm.model.UserViewModel" />
+
+        <import type="android.text.TextUtils" />
+
+        <import
+            alias="MyUtils"
+            type="com.example.testmvvm.model.TextUtils" />
+
+        <variable
+            name="myutils"
+            type="MyUtils" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{(v)->userviewmodel.showName()}"
+            android:text="@{usermodel.name}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{myutils.getName()}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{TextUtils.isEmpty(usermodel.name)?name:null}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_shape"
+            android:text="加了虚线描边的矩形"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line_shape"
+            android:layerType="software" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ring_shape" />
+    </LinearLayout>
+</layout>
